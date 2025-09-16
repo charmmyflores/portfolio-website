@@ -1,0 +1,39 @@
+import { useState } from "react";
+import { Mail, Phone, ChevronDown, ChevronUp, Briefcase, GraduationCap, Code2, BookOpen } from "lucide-react";
+
+export default function Portfolio() {
+  const [activeSection, setActiveSection] = useState("about");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleSection = (section: string) => {
+    if (activeSection === section) {
+      setActiveSection("");
+    } else {
+      setActiveSection(section);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
+      {/* Header/Navigation */}
+      <header className="sticky top-0 z-10 bg-white shadow-sm">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="text-xl font-bold text-blue-800">Charmaine Flores</div>
+            <nav className="hidden md:flex space-x-8">
+              <button onClick={() => setActiveSection("about")} className="text-blue-800 hover:text-blue-600">About</button>
+              <button onClick={() => setActiveSection("experience")} className="text-blue-800 hover:text-blue-600">Experience</button>
+              <button onClick={() => setActiveSection("skills")} className="text-blue-800 hover:text-blue-600">Skills</button>
+              <button onClick={() => setActiveSection("contact")} className="text-blue-800 hover:text-blue-600">Contact</button>
+            </nav>
+            <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <ChevronUp className="h-6 w-6" /> : <ChevronDown className="h-6 w-6" />}
+            </button>
+          </div>
+          
+          {isMenuOpen && (
+            <nav className="mt-4 md:hidden flex flex-col space-y-3">
+              <button onClick={() => { setActiveSection("about"); setIsMenuOpen(false); }} className="text-blue-800 hover:text-blue-600 py-2">About</button>
+              <button onClick={() => { setActiveSection("experience"); setIsMenuOpen(false); }} className="text-blue-800 hover:text-blue-600 py-2">Experience</button>
+              <button onClick={() => { setActiveSection("skills"); setIsMenuOpen(false); }} className="text-blue-800 hover:text-blue-600 py-2">Skills</button>
+              <button onClick={() extreme response length exceeded, please continue this in the next message```
